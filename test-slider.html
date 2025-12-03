@@ -1,0 +1,217 @@
+&lt;!DOCTYPE html&gt;
+&lt;html lang="fr"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Test Slider - KF Business&lt;/title&gt;
+    &lt;link rel="stylesheet" href="css/style.css"&gt;
+    &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"&gt;
+    &lt;style&gt;
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        .test-info {
+            background: #f8f9fa;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 3px solid #3498db;
+        }
+        .test-info h1 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        .test-info p {
+            color: #7f8c8d;
+        }
+        .instructions {
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .instructions h2 {
+            color: #3498db;
+            margin-bottom: 15px;
+        }
+        .instructions ul {
+            line-height: 2;
+        }
+        .status {
+            display: inline-block;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-weight: bold;
+            margin-left: 10px;
+        }
+        .status.ok {
+            background: #27ae60;
+            color: white;
+        }
+        .status.error {
+            background: #e74c3c;
+            color: white;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class="test-info"&gt;
+        &lt;h1&gt;&lt;i class="fas fa-vial"&gt;&lt;/i&gt; Test du Slider&lt;/h1&gt;
+        &lt;p&gt;Page de test pour vérifier le fonctionnement du slider d'images&lt;/p&gt;
+    &lt;/div&gt;
+
+    &lt;!-- Hero Section avec Slider --&gt;
+    &lt;section class="hero"&gt;
+        &lt;div class="hero-slider"&gt;
+            &lt;!-- Slide 1 --&gt;
+            &lt;div class="slider-item"&gt;
+                &lt;img src="images/Component 2.png" alt="Slide 1" class="hero-image"&gt;
+            &lt;/div&gt;
+
+            &lt;!-- Slide 2 --&gt;
+            &lt;div class="slider-item"&gt;
+                &lt;img src="images/Component 3.png" alt="Slide 2" class="hero-image"&gt;
+            &lt;/div&gt;
+
+            &lt;!-- Slide 3 --&gt;
+            &lt;div class="slider-item"&gt;
+                &lt;img src="images/Component 4.png" alt="Slide 3" class="hero-image"&gt;
+            &lt;/div&gt;
+
+            &lt;!-- Slide 4 --&gt;
+            &lt;div class="slider-item"&gt;
+                &lt;img src="images/Component 5.png" alt="Slide 4" class="hero-image"&gt;
+            &lt;/div&gt;
+
+            &lt;!-- Slide 5 --&gt;
+            &lt;div class="slider-item"&gt;
+                &lt;img src="images/Component 6.png" alt="Slide 5" class="hero-image"&gt;
+            &lt;/div&gt;
+
+            &lt;!-- Overlay avec contenu --&gt;
+            &lt;div class="hero-overlay"&gt;
+                &lt;div class="hero-content"&gt;
+                    &lt;h1&gt;🎯 Test du Slider&lt;/h1&gt;
+                    &lt;p&gt;Le slider devrait démarrer automatiquement&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/section&gt;
+
+    &lt;div class="instructions"&gt;
+        &lt;h2&gt;&lt;i class="fas fa-clipboard-list"&gt;&lt;/i&gt; Instructions de Test&lt;/h2&gt;
+        &lt;ul&gt;
+            &lt;li id="test1"&gt;
+                &lt;strong&gt;Test 1 :&lt;/strong&gt; Le slider s'affiche correctement
+                &lt;span class="status" id="status1"&gt;...&lt;/span&gt;
+            &lt;/li&gt;
+            &lt;li id="test2"&gt;
+                &lt;strong&gt;Test 2 :&lt;/strong&gt; Les images changent automatiquement (toutes les 5 secondes)
+                &lt;span class="status" id="status2"&gt;...&lt;/span&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;strong&gt;Test 3 :&lt;/strong&gt; Cliquer sur les boutons fléchés (gauche/droite) - Doit changer d'image
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;strong&gt;Test 4 :&lt;/strong&gt; Cliquer sur les points en bas - Doit aller à l'image correspondante
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;strong&gt;Test 5 :&lt;/strong&gt; Survoler le slider avec la souris - Le défilement doit se mettre en pause
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;strong&gt;Test 6 :&lt;/strong&gt; Utiliser les flèches du clavier (←→) - Doit naviguer entre les images
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;strong&gt;Test 7 (Mobile) :&lt;/strong&gt; Swiper à gauche/droite - Doit changer d'image
+            &lt;/li&gt;
+        &lt;/ul&gt;
+
+        &lt;h2 style="margin-top: 30px;"&gt;&lt;i class="fas fa-info-circle"&gt;&lt;/i&gt; Informations Techniques&lt;/h2&gt;
+        &lt;div id="technical-info"&gt;
+            &lt;p&gt;&lt;strong&gt;Nombre de slides détectés :&lt;/strong&gt; &lt;span id="slide-count"&gt;...&lt;/span&gt;&lt;/p&gt;
+            &lt;p&gt;&lt;strong&gt;Slide actif :&lt;/strong&gt; &lt;span id="current-slide"&gt;...&lt;/span&gt;&lt;/p&gt;
+            &lt;p&gt;&lt;strong&gt;Défilement automatique :&lt;/strong&gt; &lt;span id="autoplay-status"&gt;...&lt;/span&gt;&lt;/p&gt;
+        &lt;/div&gt;
+
+        &lt;h2 style="margin-top: 30px;"&gt;&lt;i class="fas fa-check-circle" style="color: #27ae60;"&gt;&lt;/i&gt; Résultat Attendu&lt;/h2&gt;
+        &lt;ul&gt;
+            &lt;li&gt;5 images doivent défiler automatiquement&lt;/li&gt;
+            &lt;li&gt;Les transitions doivent être fluides (fade in/out)&lt;/li&gt;
+            &lt;li&gt;Les boutons fléchés doivent être visibles sur les côtés&lt;/li&gt;
+            &lt;li&gt;5 points de navigation doivent apparaître en bas&lt;/li&gt;
+            &lt;li&gt;Le point actif doit être blanc et plus grand&lt;/li&gt;
+            &lt;li&gt;Le texte overlay doit rester visible au-dessus des images&lt;/li&gt;
+        &lt;/ul&gt;
+
+        &lt;div style="text-align: center; margin-top: 30px;"&gt;
+            &lt;a href="index.php" style="display: inline-block; padding: 12px 30px; background: #3498db; color: white; text-decoration: none; border-radius: 5px; font-weight: bold;"&gt;
+                &lt;i class="fas fa-arrow-left"&gt;&lt;/i&gt; Retour au site
+            &lt;/a&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;!-- Script du Slider --&gt;
+    &lt;script src="js/slider.js"&gt;&lt;/script&gt;
+
+    &lt;!-- Script de test --&gt;
+    &lt;script&gt;
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                // Test 1 : Vérifier que le slider existe
+                const slider = document.querySelector('.hero-slider');
+                const status1 = document.getElementById('status1');
+                if (slider) {
+                    status1.textContent = 'OK';
+                    status1.className = 'status ok';
+                } else {
+                    status1.textContent = 'ERREUR';
+                    status1.className = 'status error';
+                }
+
+                // Test 2 : Vérifier le changement automatique
+                const slides = document.querySelectorAll('.slider-item');
+                let initialSlide = null;
+
+                slides.forEach((slide, index) =&gt; {
+                    if (slide.classList.contains('active')) {
+                        initialSlide = index;
+                    }
+                });
+
+                setTimeout(function() {
+                    let currentSlide = null;
+                    slides.forEach((slide, index) =&gt; {
+                        if (slide.classList.contains('active')) {
+                            currentSlide = index;
+                        }
+                    });
+
+                    const status2 = document.getElementById('status2');
+                    if (currentSlide !== initialSlide) {
+                        status2.textContent = 'OK';
+                        status2.className = 'status ok';
+                    } else {
+                        status2.textContent = 'EN ATTENTE';
+                        status2.className = 'status';
+                    }
+                }, 6000);
+
+                // Informations techniques
+                document.getElementById('slide-count').textContent = slides.length;
+
+                // Mise à jour du slide actif
+                setInterval(function() {
+                    slides.forEach((slide, index) =&gt; {
+                        if (slide.classList.contains('active')) {
+                            document.getElementById('current-slide').textContent = (index + 1) + ' / ' + slides.length;
+                        }
+                    });
+                    document.getElementById('autoplay-status').textContent = 'Actif';
+                }, 1000);
+            }, 500);
+        });
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
